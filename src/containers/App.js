@@ -15,13 +15,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		fetch('https://jsonplaceholder.typicode.com/users',{
-			mode: "cors",
-			headers: {
-			  "Access-Control-Allow-Origin": 
-				"https://jsonplaceholder.typicode.com/",
-			},
-		  })
+		fetch('https://jsonplaceholder.typicode.com/users')
 			.then(response => response.json())
 			.then(users => this.setState({robots: users}));
 	}
